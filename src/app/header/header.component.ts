@@ -10,7 +10,7 @@ import firebase from 'firebase/app';
 })
 export class HeaderComponent implements OnInit {
 
-  title = 'MH Reloc';
+  title = 'ImmoName';
   isLoggedIn = false;
   isDisabled = true; //Liaison par la propriété , property binding, ngClass //à retirer
   //la liaison par un évenement, event binding 
