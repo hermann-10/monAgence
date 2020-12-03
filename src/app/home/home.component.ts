@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { PropertiesService } from '../services/properties.service';
 
@@ -13,7 +14,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   propertiesSubscription: Subscription;
 
   constructor(
-    private propertiesService : PropertiesService
+    private propertiesService : PropertiesService,
+    private router : Router
   ) { }
 
   ngOnInit() {
@@ -48,6 +50,11 @@ export class HomeComponent implements OnInit, OnDestroy {
       return 'green';
     }
   }
+
+  /*onGoToSingleProperty(i){
+    console.log('onSinglePropprty');
+    this.router.navigate([])
+  }*/
 
   ngOnDestroy(){
     this.propertiesSubscription.unsubscribe();
